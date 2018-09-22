@@ -11,7 +11,8 @@
 
       var baseUri = 'http://' + $location.host() + ":" + $location.port();
       var service = {
-        getAll: getAll
+        getAll: getAll,
+        save: save
       };
       return service;
 
@@ -22,6 +23,14 @@
         });
         return promise;
       }
+
+      // Save
+      function save(person) {
+        var promise = $http.post(baseUri + "/api/person", person).then(function(response) {
+          return response.data;
+        });
+        return promise;
+      } 
 
     }
 })();

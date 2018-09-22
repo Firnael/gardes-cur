@@ -1,5 +1,20 @@
-<div class="row">
-    <div class="col-md-12">
-        Salut à tous
-    </div>
+<div layout="column" class="md-inline-form">
+    <md-content layout-gt-sm="row" layout-padding="">
+        <div>
+            <md-input-container>
+                <label>Name</label>
+                <input ng-model="vm.person.name">
+            </md-input-container>
+
+            <md-input-container>
+                <label>Email</label>
+                <input ng-model="vm.person.email" type="email">
+            </md-input-container>
+        </div>
+    </md-content>
+    <md-content>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button class="md-raised" ng-click="vm.createPerson(vm.person)">Save</md-button>
+        </section>
+    </md-content>
 </div>

@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
 
 var PersonSchema = new Schema({
     lastModified: Number,
-    name: String
+    name: String,
+    email: String
 });
 
 module.exports = mongoose.model('Person', PersonSchema);
