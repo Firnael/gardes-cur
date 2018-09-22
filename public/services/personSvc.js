@@ -5,19 +5,19 @@
         .module('app')
         .factory('PersonSvc', PersonSvc);
 
-        PersonSvc.$inject = ['$http'];
+        PersonSvc.$inject = ['$http', '$location'];
 
-    function PersonSvc($http) {
+    function PersonSvc($http, $location) {
 
       var baseUri = 'http://' + $location.host() + ":" + $location.port();
       var service = {
-        getPersons: getPersons
+        getAll: getAll
       };
       return service;
 
       // Get all
-      function getPersons(){
-        var promise = $http.get(baseUri + "/api/persons/").then(function(response) {
+      function getAll(){
+        var promise = $http.get(baseUri + "/api/person").then(function(response) {
             return response.data;
         });
         return promise;

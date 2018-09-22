@@ -9,6 +9,7 @@
 
     function HomeCtrl($routeParams, PersonSvc){
         var vm = this;
+        vm.getPersons = getPersons;
         activate();
 
         //////////////

@@ -1,4 +1,4 @@
-angular.module("app", ['ngRoute', 'ngAnimate', 'timer', 'chart.js'])
+angular.module("app", ['ngRoute', 'ngAnimate', 'ngMaterial', 'ngMessages', 'timer', 'chart.js'])
     .service('authInterceptor', function($q) {
       var service = this;
       service.responseError = function(rejection) {
