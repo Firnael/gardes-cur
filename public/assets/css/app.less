@@ -1,0 +1,692 @@
+/* Global */
+
+a {
+  text-decoration: none !important;
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.btn-default {
+  background-color: #333;
+  border-color: #333;
+  &:hover {
+    background-color: #444;
+    border-color: #444;
+  }
+}
+
+.btn-xs {
+  padding: 0.15rem 0.3rem;
+  font-size: 0.8203125rem;
+  line-height: 1.0;
+  border-radius: 0.2rem;
+}
+
+.img-thumbnail {
+  border: 1px solid #555;
+}
+
+.fade:not(.show) {
+  opacity: 1;
+}
+
+/* Scroll bars */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(25,25,25,0.8);
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+.table-condensed>tbody>tr>td {
+  padding: 3px;
+}
+
+.label-custom {
+  text-shadow: 1px 1px 1px #111;
+  // background-color: @clear;
+  // &.label-test { background: repeating-linear-gradient(45deg, #77EE77, #77EE77 1px, #66DD66 1px, @clear 2px); }
+  &.label-bis {
+    border: 1px solid #6666DD;
+    background-color: rgba(102, 102, 221, 0.5);
+  }
+  &.label-up {
+    border: 1px solid #77EE77;
+    background-color: rgba(119, 238, 119, 0.5);
+  }
+  &.label-proc {
+    border: 1px solid #FFEE66;
+    background-color: rgba(255, 238, 102, 0.5);
+  }
+  &.label-plustwo {
+    border: 1px solid #EE7733;
+    background-color: rgba(238, 119, 51, 0.5);
+  }
+  &.label-no {
+    border: 1px solid #EE5555;
+    background-color: rgba(238, 85, 85, 0.5);
+  }
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.fill {
+  min-height: 100%;
+  height: 100%;
+}
+
+.col-md-5th {
+  width: 20%;
+}
+
+
+/* Sidenav */
+@sidenav-color: #151515;
+.sidenav {
+  height: 100%;
+  width: 70px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: @sidenav-color;
+  border-right: 1px solid #111;
+  overflow-x: hidden;
+  transition: ease 0.3s;
+  &.open {
+    width: 200px;
+  }
+  .sidenav-logo {
+    height: 70px;
+    padding-top: 10px;
+    padding-left: 5px;
+    .sidenav-logo-brand {
+      position: absolute;
+      font-family: 'Oswald', sans-serif;
+      color: @brand;
+      font-size: 22px;
+      margin-top: 14px;
+      margin-left: 12px;
+    }
+  }
+  .sidenav-element {
+    cursor: pointer;
+    height: 70px;
+    display: block;
+    &.active {
+      background-color: #333;
+      text-shadow: 2px 2px 1px #111;
+    }
+    &:hover {
+      background-color: #252525;
+      text-shadow: 2px 2px 1px #111;
+    }
+    .sidenav-element-content {
+      color: #FFFFFF;
+      position: absolute;
+      white-space: nowrap;
+      margin-top: 16px;
+      margin-left: 18px;
+      i {
+        font-size: 26px;
+        min-width: 50px;
+      }
+      span {
+        font-family: 'Oswald', sans-serif;
+        color: #666;
+        font-size: 22px;
+      }
+      img {
+        min-width: 50px;
+        max-width: 50px;
+        min-height: 50px;
+        min-height: 50px;
+        border-radius: 50%;
+        margin-top: -5px;
+        margin-left: -10px;
+        margin-right: 10px;
+      }
+    }
+    .sidenav-element-btag {
+      bottom: 100px;
+    }
+  }
+}
+
+.rows-wrapper {
+  transition: margin-left ease 0.3s;
+  margin-left: 70px;
+  &.open {
+    margin-left: 200px;
+  }
+  height: 100%;
+}
+
+.title-bar {
+  background-color: #2f2f2f;
+  border-bottom: 1px solid #1a1a1a;
+  height: 70px;
+  .title-bar-title {
+    margin-top: 10px;
+    -webkit-animation: 0.3s ease slideInFromLeft;
+    animation: 0.3s ease slideInFromLeft;
+  }
+  .title-bar-update {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    .title-bar-update-timestamp {
+      color: #777;
+      margin-right: 10px;
+      font-size: 12px;
+      font-style: italic;
+    }
+  }
+}
+
+
+/* Cover */
+.cover {
+  margin-top: 100px;
+  text-align: center;
+  color: #121212;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 0px 2px 3px #353535;
+
+  .cover-title {
+    font-size: 90px;
+  }
+  .cover-server {
+    font-size: 50px;
+  }
+  .cover-btn {
+    background-color:#4F85CD;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+
+/* Home */
+.home-timer {
+  margin-left: 20px;
+  font-size: 50px;
+  color: #666;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 0px 2px 3px #353535;
+}
+
+
+/* Raid */
+.raid-loots {
+  .raid-loots-table {
+    .raid-bosses-img {
+      cursor: pointer;
+      border-radius: 10px 10px 0px 0px;
+      width: 80px;
+      height: 40px;
+      &.selected {
+        background-color: #353535;
+      }
+      &:hover {
+        background-color: #353535;
+      }
+    }
+    .raid-loots-value {
+      text-align: center;
+    }
+  }
+}
+
+
+/* Character */
+.character-row {
+    height: 49.999%;
+}
+
+.character-unit-container {
+    padding: 0 0 0 0;
+}
+
+.character-unit {
+    background-color: #3c3c3c;
+    background-image: url('../img/background.png');
+    border: 1px solid #222;
+}
+.character-unit:hover {
+    background-color: #494949;
+    box-shadow: 3px 3px 2px 0 #151515;
+}
+
+.half-character-unit {
+    min-height: 50%;
+    padding: 0 15px 0 15px;
+}
+
+.character-unit-header {
+    font-size: 11px;
+    height: 24px;
+    padding-top: 4px;
+    margin-bottom: 4px;
+    border-bottom: 1px dashed #222;
+}
+
+.character-unit-body {
+    padding-top: 10px;
+    text-align: center;
+    .character-unit-thumbnail {
+      min-width: 236px;
+      min-height: 122px;
+    }
+    .character-unit-lvl {
+      font-size: 26px;
+    }
+}
+
+.character-unit-professions {
+  margin-top: 0px;
+}
+
+.character-reputation-progress {
+  position: relative;
+  height: 16px;
+  background-color: #333;
+  margin-bottom: 10px;
+  
+  .progress-bar {
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #333;
+    line-height: 15px;
+    background-color: #65ae22;
+  }
+
+  .hated {
+    background-color: red;
+  }
+  .hostile {
+    background-color: darkorange;
+  }
+  .unfriendly {
+    background-color: orange;
+  }
+  .neutral {
+    background-color: yellow;
+  }
+  .friendly {
+    background-color: darkgreen;
+  }
+  .honored {
+    background-color: green !important;
+  }
+  .revered {
+    background-color: rgb(141, 211, 141) !important;
+  }
+  .exalted {
+    background-color: rgb(104, 200, 230);
+  }
+  
+  .character-reputation-progress-text {
+    position: absolute;
+    display: block;
+    width: 100%;
+  }
+}
+
+
+/* Recipes */
+.recipes-tabs {
+  cursor: pointer;
+  height: 50px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #111;
+  font-size: large;
+  .recipe-tab {
+    height: 100%;
+    background-color: #222;
+    border-bottom: 1px solid black;
+    &:hover {
+      background-color: #333;
+    }
+    .recipe-tab-content {
+      margin-top: 10px;
+    }
+  }
+  .recipes-current-tab {
+    background-color: #444;
+    border-bottom: 2px solid black;
+    &:hover {
+      background-color: #353535;
+    }
+  }
+}
+
+.recipes-table {
+  text-align: center;
+  th {
+    text-align: center;
+  }
+}
+
+
+/* Progress */
+.progress-wrapper {
+  height: calc(~"100% - 70px");
+  .progress-title {
+    height: 60px;
+  }
+  .progress-content {
+    height: calc(~"100% - 81px");
+    .progress-boss-unit {
+      text-align: center;
+      height: 9.9%;
+      &:hover {
+        background-color: rgba(255,255,255,0.1);
+      }
+      .progress-boss-unit-name {
+        font-size: 20px;
+        text-shadow: 2px 2px 1px #000;
+      }
+      .progress-difficulty-no-down {
+        color: @common-color;
+      }
+      .progress-difficulty-normal {
+        color: @uncommon-color;
+      }
+      .progress-difficulty-heroic {
+        color: @rare-color;
+      }
+      .progress-difficulty-mythic {
+        color: @epic-color;
+      }
+    }
+  }
+  .progress-update {
+    text-align: center;
+  }
+}
+
+
+/* Admin */
+.link-main-reroll {
+  font-size: 12px;
+  cursor: pointer;
+  &:hover {
+    color: gold;
+  }
+  &.selected {
+    color: #33BB77;
+  }
+}
+
+.reroll-alone {
+  color: #993333;
+}
+
+
+/* Roster */
+.roster-wrapper {
+  height: calc(~"100% - 70px");
+  .roster-table-wrapper {
+    height: 100%;
+    overflow-y: auto;
+    border-right: 1px dashed #555;
+    .roster-table {
+      text-align: center;
+      th {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.roster-raider-role-name {
+  text-align: left;
+  .roster-raider-name {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px #222;
+    text-decoration: none !important;
+    &:hover {
+      color: yellow;
+    }
+  }
+}
+
+.roster-audit-neutral {
+  background-color: fade(grey, 20%);
+}
+.roster-audit-good {
+  background-color: fade(green, 20%);
+}
+.roster-audit-warning {
+  background-color: fade(yellow, 20%);
+}
+.roster-audit-bad {
+  background-color: fade(red, 20%);
+  font-weight: bold;
+}
+.roster-audit-awesome {
+  background-color: fade(@mage-color, 20%);
+}
+
+.roster-ilvl-lowest {
+  font-size: 20px;
+  color: fade(red, 80%);
+}
+.roster-ilvl-average {
+  font-size: 30px;
+}
+.roster-ilvl-highest {
+  font-size: 20px;
+  color: fade(lightgreen, 80%);
+}
+
+.roster-armor-type {
+  width: 48px;
+  height:24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &.roster-armor-type-plate {
+    background-color: #333333;
+    background-image: url(http://wow.zamimg.com/images/wow/icons/large/inv_chest_plate04.jpg);
+  }
+  &.roster-armor-type-mail {
+    background-color: #777777;
+    background-image: url(http://wow.zamimg.com/images/wow/icons/large/inv_chest_chain.jpg);
+  }
+  &.roster-armor-type-leather {
+    background-color: #AAAAAA;
+    background-image: url(http://wow.zamimg.com/images/wow/icons/large/inv_chest_leather_10.jpg);
+  }
+  &.roster-armor-type-cloth {
+    background-color: #FFFFFF;
+    background-image: url(http://wow.zamimg.com/images/wow/icons/large/inv_chest_cloth_32.jpg);
+  }
+}
+
+
+/* Mythic+ */
+.mythic-table {
+  th {
+    text-align: center;
+  }
+  .mythic-table-name {
+    text-align: right;
+  }
+  .mythic-table-total {
+    font-weight: bold;
+  }
+  .mythic-table-count {
+    text-align: center;
+  }
+}
+
+/* Ranking */
+.guild-name {
+  a {
+    text-decoration: none !important;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+
+/* User */
+.user-character {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  &.user-character-selected {
+    background-color: rgba(100, 100, 100, 0.4);
+  }
+  .user-character-thumbnail {
+    min-width: 64px;
+    min-height: 64px;
+  }
+  .user-character-name {
+    font-size: 20px;
+    text-decoration: none !important;
+    &:hover {
+      color: yellow;
+    }
+  }
+}
+
+
+/* Logs widgets */
+.log-widget {
+  margin: 5px 5px 5px 5px;
+  padding: 8px 8px 8px 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .log-widget-btn {
+    position: absolute;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid grey;
+    &:hover {
+      border: 2px solid white;
+    }
+  }
+}
+
+
+/* Token */
+.token-gold-value {
+  font-size: 30px;
+}
+.token-gold-img {
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+
+/* Guest */
+.guest-brand {
+  font-family: 'Oswald', sans-serif;
+  color: @brand;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.guest-text {
+  margin-top: 100px;
+}
+.guest-button {
+  margin-top: 100px;
+  background-color: @clear;
+}
+
+
+/* Colors */
+@clear: rgba(0,0,0,0);
+@brand: #8A0804;
+
+/* Classes colors */
+@warrior-color: #C79C6E;
+@death-knight-color: #C41F3B;
+@demon-hunter-color: #A330C9;
+@druid-color: #FF7D0A;
+@hunter-color: #ABD473;
+@mage-color: #69CCF0;
+@monk-color: #00FF96;
+@paladin-color: #F58CBA;
+@priest-color: #FFFFFF;
+@rogue-color: #FFF569;
+@shaman-color: #0070DE;
+@warlock-color: #9482C9;
+
+.warrior { color: @warrior-color; }
+.death-knight { color: @death-knight-color; }
+.demon-hunter { color: @demon-hunter-color; }
+.druid { color: @druid-color; }
+.hunter { color: @hunter-color; }
+.mage { color: @mage-color; }
+.monk { color: @monk-color; }
+.paladin { color: @paladin-color; }
+.priest { color: @priest-color; }
+.rogue { color: @rogue-color; }
+.shaman { color: @shaman-color; }
+.warlock { color: @warlock-color; }
+
+.warrior-bg { background-color: fade(@warrior-color, 70%) }
+.death-knight-bg { background-color: fade(@death-knight-color, 70%) }
+.demon-hunter-bg { background-color: fade(@demon-hunter-color, 70%) }
+.druid-bg { background-color: fade(@druid-color, 70%) }
+.hunter-bg { background-color: fade(@hunter-color, 70%) }
+.mage-bg { background-color: fade(@mage-color, 70%) }
+.monk-bg { background-color: fade(@monk-color, 70%) }
+.paladin-bg { background-color: fade(@paladin-color, 70%) }
+.priest-bg { background-color: fade(@priest-color, 70%) }
+.rogue-bg { background-color: fade(@rogue-color, 70%) }
+.shaman-bg { background-color: fade(@shaman-color, 70%) }
+.warlock-bg { background-color: fade(@warlock-color, 70%) }
+
+/* Quality colors */
+@poor-color: grey;
+@common-color: white;
+@uncommon-color: #1eff00;
+@rare-color: #0070ff;
+@epic-color: #a335ee;
+@legendary-color: #ff8000;
+@artefact-color: #e6cc80;
+@heirloom-color: @mage-color;
+
+.poor { color: @poor-color }
+.common { color: @common-color }
+.uncommon { color: @uncommon-color }
+.rare { color: @rare-color }
+.epic { color: @epic-color }
+.legendary { color: @legendary-color }
+.artefact { color: @artefact-color }
+.heirloom { color: @heirloom-color }
+
+.poor-bg { background-color: fade(@poor-color, 20%) }
+.common-bg { background-color: fade(@common-color, 50%) }
+.uncommon-bg { background-color: fade(@uncommon-color, 50%) }
+.rare-bg { background-color: fade(@rare-color, 50%) }
+.epic-bg { background-color: fade(@epic-color, 50%) }
+.legendary-bg { background-color: fade(@legendary-color, 50%) }
+.artefact-bg { background-color: fade(@artefact-color, 50%) }
+.heirloom-bg { background-color: fade(@heirloom-color, 50%) }
